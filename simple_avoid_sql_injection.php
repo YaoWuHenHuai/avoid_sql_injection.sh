@@ -1,5 +1,6 @@
 <?php
 //An extra security step, must not rely on an unique security measure
+//Here we basically wont allow chars that are often use for Prompts on both mariadb and mysql
 $BAD_pattern = "/[',=]/";
 $SECOND_BAD_pattern = '/["]/';
 if (preg_match($BAD_pattern, $full_name) || preg_match($BAD_pattern, $user_name) || preg_match($BAD_pattern, $mail)
